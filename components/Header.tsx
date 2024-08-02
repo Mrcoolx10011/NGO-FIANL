@@ -27,7 +27,7 @@ const Header = () => {
 
   // getting all wishlist items by user id
   const getWishlistByUserId = async (id: string) => {
-    const response = await fetch(`https://ngo-server-production.up.railway.app/api/wishlist/${id}`, {
+    const response = await fetch(`https://ngo-server-xyum.onrender.com/api/wishlist/${id}`, {
       cache: "no-store",
     });
     const wishlist = await response.json();
@@ -49,7 +49,7 @@ const Header = () => {
   const getUserByEmail = async () => {
     if (session?.user?.email) {
       
-      fetch(`https://ngo-server-production.up.railway.app/api/users/email/${session?.user?.email}`, {
+      fetch(`https://ngo-server-xyum.onrender.com/api/users/email/${session?.user?.email}`, {
         cache: "no-store",
       })
         .then((response) => response.json())

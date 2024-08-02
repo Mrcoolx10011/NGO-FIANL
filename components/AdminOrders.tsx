@@ -18,7 +18,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await fetch("https://ngo-server-production.up.railway.app/api/orders");
+      const response = await fetch("https://ngo-server-xyum.onrender.com/api/orders");
       const data = await response.json();
       setOrders(data);
     };

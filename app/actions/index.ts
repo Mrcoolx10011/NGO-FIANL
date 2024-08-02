@@ -3,7 +3,7 @@
 import { revalidateTag } from "next/cache";
 
 export async function deleteWishItem(id: string){
-  await fetch(`https://ngo-server-production.up.railway.app/api/wishlist/${id}`, {
+  await fetch(`https://ngo-server-xyum.onrender.com/api/wishlist/${id}`, {
     method: "DELETE",
   });
 }

@@ -9,7 +9,7 @@ const DashboardUsers = () => {
 
   useEffect(() => {
     // sending API request for all users
-    fetch("https://ngo-server-production.up.railway.app/api/users")
+    fetch("https://ngo-server-xyum.onrender.com/api/users")
       .then((res) => {
         return res.json();
       })

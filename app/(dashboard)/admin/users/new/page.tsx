@@ -28,7 +28,7 @@ const DashboardCreateNewUser = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userInput),
         };
-        fetch(`https://ngo-server-production.up.railway.app/api/users`, requestOptions)
+        fetch(`https://ngo-server-xyum.onrender.com/api/users`, requestOptions)
           .then((response) => {
             if(response.status === 201){
               return response.json();

@@ -8,7 +8,7 @@ interface Props {
 // sending api request for search results for a given search text
 const SearchPage = async ({ searchParams: { search } }: Props) => {
   const data = await fetch(
-    `https://ngo-server-production.up.railway.app/api/search?query=${search || ""}`
+    `https://ngo-server-xyum.onrender.com/api/search?query=${search || ""}`
   );
 
   const products = await data.json();

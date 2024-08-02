@@ -31,7 +31,7 @@ const DashboardNewCategoryPage = () => {
         }),
       };
       // sending API request for creating new cateogry
-      fetch(`https://ngo-server-production.up.railway.app/api/categories`, requestOptions)
+      fetch(`https://ngo-server-xyum.onrender.com/api/categories`, requestOptions)
         .then((response) => {
 
           if (response.status === 201) {

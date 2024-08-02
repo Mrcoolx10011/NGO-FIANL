@@ -52,7 +52,7 @@ const AdminSingleOrder = () => {
   useEffect(() => {
     const fetchOrderData = async () => {
       const response = await fetch(
-        `https://ngo-server-production.up.railway.app/api/orders/${params?.id}`
+        `https://ngo-server-xyum.onrender.com/api/orders/${params?.id}`
       );
       const data: Order = await response.json();
       setOrder(data);
@@ -60,7 +60,7 @@ const AdminSingleOrder = () => {
 
     const fetchOrderProducts = async () => {
       const response = await fetch(
-        `https://ngo-server-production.up.railway.app/api/order-product/${params?.id}`
+        `https://ngo-server-xyum.onrender.com/api/order-product/${params?.id}`
       );
       const data: OrderProduct[] = await response.json();
       setOrderProducts(data);
@@ -98,7 +98,7 @@ const AdminSingleOrder = () => {
         return;
       }
 
-      fetch(`https://ngo-server-production.up.railway.app/api/orders/${order?.id}`, {
+      fetch(`https://ngo-server-xyum.onrender.com/api/orders/${order?.id}`, {
         method: "PUT", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -126,11 +126,11 @@ const AdminSingleOrder = () => {
     };
 
     fetch(
-      `https://ngo-server-production.up.railway.app/api/order-product/${order?.id}`,
+      `https://ngo-server-xyum.onrender.com/api/order-product/${order?.id}`,
       requestOptions
     ).then((response) => {
       fetch(
-        `https://ngo-server-production.up.railway.app/api/orders/${order?.id}`,
+        `https://ngo-server-xyum.onrender.com/api/orders/${order?.id}`,
         requestOptions
       ).then((response) => {
         toast.success("Order deleted successfully");

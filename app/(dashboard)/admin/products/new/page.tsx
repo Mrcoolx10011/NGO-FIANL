@@ -43,7 +43,7 @@ const AddNewProduct = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
     };
-    fetch(`https://ngo-server-production.up.railway.app/api/products`, requestOptions)
+    fetch(`https://ngo-server-xyum.onrender.com/api/products`, requestOptions)
       .then((response) => {
         if (response.status === 201) {
           return response.json();
@@ -74,7 +74,7 @@ const AddNewProduct = () => {
     formData.append("uploadedFile", file);
 
     try {
-      const response = await fetch("https://ngo-server-production.up.railway.app/api/main-image", {
+      const response = await fetch("https://ngo-server-xyum.onrender.com/api/main-image", {
         method: "POST",
         body: formData,
       });
@@ -90,7 +90,7 @@ const AddNewProduct = () => {
   };
 
   const fetchCategories = async () => {
-    fetch(`https://ngo-server-production.up.railway.app/api/categories`)
+    fetch(`https://ngo-server-xyum.onrender.com/api/categories`)
       .then((res) => {
         return res.json();
       })
