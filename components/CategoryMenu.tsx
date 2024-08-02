@@ -24,7 +24,7 @@ const   CategoryMenu = () => {
 
   // getting all categories to be displayed on the all categories page
   useEffect(() => {
-    fetch("http://localhost:3001/api/categories")
+    fetch("https://ngo-server-production.up.railway.app/api/categories")
       .then((res) => res.json())
       .then((data) => {
         console.log(data)

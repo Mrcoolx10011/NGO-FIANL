@@ -11,7 +11,7 @@ const DashboardProductTable = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/products?mode=admin", {cache: "no-store"})
+    fetch("https://ngo-server-production.up.railway.app/api/products?mode=admin", {cache: "no-store"})
       .then((res) => {
         return res.json();
       })

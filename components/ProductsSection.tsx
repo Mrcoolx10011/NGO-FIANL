@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 import Heading from "./Heading";
 
 const ProductsSection = async () => {
-  const data = await fetch("http://localhost:3001/api/products");
+  const data = await fetch("https://ngo-server-production.up.railway.app/api/products");
   const products = await data.json();
   
 

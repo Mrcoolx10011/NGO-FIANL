@@ -29,7 +29,7 @@ const DashboardSingleCategory = ({
       method: "DELETE",
     };
     // sending API request for deleting a category
-    fetch(`http://localhost:3001/api/categories/${id}`, requestOptions)
+    fetch(`https://ngo-server-production.up.railway.app/api/categories/${id}`, requestOptions)
       .then((response) => {
         if (response.status === 204) {
           toast.success("Category deleted successfully");
@@ -57,7 +57,7 @@ const DashboardSingleCategory = ({
         }),
       };
       // sending API request for updating a category
-      fetch(`http://localhost:3001/api/categories/${id}`, requestOptions)
+      fetch(`https://ngo-server-production.up.railway.app/api/categories/${id}`, requestOptions)
         .then((response) => {
           if (response.status === 200) {
             return response.json();
@@ -76,7 +76,7 @@ const DashboardSingleCategory = ({
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/categories/${id}`)
+    fetch(`https://ngo-server-production.up.railway.app/api/categories/${id}`)
       .then((res) => {
         return res.json();
       })
