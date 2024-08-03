@@ -51,7 +51,7 @@ const   CategoryMenu = () => {
       <div className="max-w-screen-2xl mx-auto py-10 gap-x-5 px-16 max-md:px-10 gap-y-5 grid grid-cols-5 max-lg:grid-cols-3 max-md:grid-cols-2 max-[450px]:grid-cols-1">
       {categories.map((item) => (
           <CategoryItem title={item.name} key={item.id} href={'/shop/' + item.name}>
-            <Image src={item.image} layout="fill" objectFit="cover" alt={item.name} />
+            <Image src="/NGO-logo.png" layout="fill" objectFit="cover" alt={item.name} />
           </CategoryItem>
         ))}
       </div>
