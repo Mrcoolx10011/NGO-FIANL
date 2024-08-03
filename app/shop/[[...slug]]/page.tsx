@@ -1,7 +1,5 @@
-"use client"
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useState } from "react";
 import {
   Breadcrumb,
   Filters,
@@ -11,18 +9,9 @@ import {
 } from "@/components";
 import NgoCard from "@/components/NgoCard";
 
-
-
-
-// improve readabillity of category text, for example category text "smart-watches" will be "smart watches"
-const improveCategoryText = (text: string): string => {
-  if (text.indexOf("-") !== -1) {
-    let textArray = text.split("-");
-
-    return textArray.join(" ");
-  } else {
-    return text;
-  }
+// improve readability of category text, for example category text "smart-watches" will be "smart watches"
+const improveCategoryText = (text: string) => {
+  return text.split("-").join(" ");
 };
 
 const ngoData = {
@@ -33,14 +22,12 @@ const ngoData = {
   contact: {
     type: "Email",
     details: "contact@ngo1.org",
-    phoneNumber:"7096210256"
-  }
+    phoneNumber: "7096210256",
+  },
 };
 
-const ShopPage = (slug: any) => {
+const ShopPage = ({ slug }: { slug: any }) => {
   const [showFilters, setShowFilters] = useState(false);
-
-
 
   return (
     <div className="text-black bg-white min-h-screen flex flex-col">
