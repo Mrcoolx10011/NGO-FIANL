@@ -70,7 +70,7 @@ const Header = () => {
         <div className="h-32 bg-white flex items-center justify-between px-16 max-[1320px]:px-16 max-md:px-6 max-lg:flex-col max-lg:gap-y-7 max-lg:justify-center max-lg:h-60 max-w-screen-2xl mx-auto relative">
         <Link href="/">
           <img
-            src="/logoNho2.png"
+            src="/LOGOwhite.png"
             width={300}
             height={300}
             alt="singitronic logo"
@@ -78,7 +78,7 @@ const Header = () => {
           />
         </Link>
         <nav className={`flex gap-x-10 items-center ${menuOpen ? 'flex-col' : 'hidden'} lg:flex`}>
-          <Link href="/" className="menu-item">Home</Link>
+          <Link href="/home" className="menu-item">Home</Link>
           <Link href="/shop" className="menu-item">Shop</Link>
           <Link href="/category" className="menu-item">Category</Link>
           <Link href="/profile" className="menu-item">Profile</Link>
