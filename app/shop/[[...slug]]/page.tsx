@@ -9,8 +9,14 @@ import {
 } from "@/components";
 import NgoCard from "@/components/NgoCard";
 
+type ShopPageProps = {
+  params: {
+    slug: string[];
+  };
+};
+
 // improve readability of category text, for example category text "smart-watches" will be "smart watches"
-const improveCategoryText = (text: string) => {
+const improveCategoryText = (text: string): string => {
   return text.split("-").join(" ");
 };
 
@@ -26,8 +32,9 @@ const ngoData = {
   },
 };
 
-const ShopPage = ({ slug }: { slug: any }) => {
+const ShopPage = ({ params }: ShopPageProps) => {
   const [showFilters, setShowFilters] = useState(false);
+  const slug = params.slug;
 
   return (
     <div className="text-black bg-white min-h-screen flex flex-col">
@@ -42,8 +49,8 @@ const ShopPage = ({ slug }: { slug: any }) => {
           {showFilters ? "Hide Filters" : "Show Filters"}
         </button>
         <h2 className="text-2xl font-bold max-sm:text-xl max-[400px]:text-lg uppercase">
-          {slug?.params?.slug && slug?.params?.slug[0]?.length > 0
-            ? improveCategoryText(slug?.params?.slug[0])
+          {slug && slug.length > 0
+            ? improveCategoryText(slug[0])
             : "All products"}
         </h2>
         <SortBy />
