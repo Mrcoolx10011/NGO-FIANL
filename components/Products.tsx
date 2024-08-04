@@ -29,14 +29,21 @@ const Products = async ({ slug }: any) => {
   }
 
   // sending API request with filtering, sorting and pagination for getting all products
-  const data = await fetch(
-    `https://ngo-server-xyum.onrender.com/api/products?filters[price][$lte]=${
-      slug?.searchParams?.price || 3000
-    }&filters[rating][$gte]=${
-      Number(slug?.searchParams?.rating) || 0
-    }&filters[inStock][$${stockMode}]=1&${
-      slug?.params?.slug?.length > 0
-        ? `filters[category][$equals]=${slug?.params?.slug}&`
+  // const data = await fetch(
+  //   `https://ngo-server-xyum.onrender.com/api/products?filters[price][$lte]=${
+  //     slug?.searchParams?.price || 3000
+  //   }&filters[rating][$gte]=${
+  //     Number(slug?.searchParams?.rating) || 0
+  //   }&filters[inStock][$${stockMode}]=1&${
+  //     slug?.params?.slug?.length > 0
+  //       ? `filters[category][$equals]=${slug?.params?.slug}&`
+  //       : ""
+  //   }sort=${slug?.searchParams?.sort}&page=${page}`
+  // );
+   const data = await fetch(
+    `https://ngo-server-xyum.onrender.com/api/products?&${
+      slug
+        ? `filters[category][$equals]=${slug[0]}&`
         : ""
     }sort=${slug?.searchParams?.sort}&page=${page}`
   );
