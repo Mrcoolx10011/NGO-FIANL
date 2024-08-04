@@ -28,16 +28,10 @@ const   CategoryMenu = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        const categoriesWithImages = data.map((category: { imageId: number; }) => {
-          const image = Images.find((img) => img.id === category.imageId);
-          return {
-            ...category,
-            image: image ? image.src : "/default-image.jpg" 
-          };
-        });
+       
     
-        setCategories(categoriesWithImages);
-        console.log(categoriesWithImages)
+        setCategories(data);
+        console.log(data)
       });
   }, []);
   console.log(categories)
