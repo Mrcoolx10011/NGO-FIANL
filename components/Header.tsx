@@ -78,7 +78,7 @@ const Header = () => {
           />
         </Link>
         <nav className={`flex gap-x-10 items-center ${menuOpen ? 'flex-col' : 'hidden'} lg:flex`}>
-          <Link href="/home" className="menu-item">Home</Link>
+          <Link href="/" className="menu-item">Home</Link>
           <Link href="/shop" className="menu-item">Shop</Link>
           <Link href="/category" className="menu-item">Category</Link>
           <Link href="/profile" className="menu-item">Profile</Link>
